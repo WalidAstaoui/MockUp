@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 function updateMessages() {
-  fetch('https://7bb3ba51-99b4-45b8-ab79-58399dd2a684-00-2r33bx6x3ysoc.janeway.replit.dev/msg/getAll')
+  //fetch('https://7bb3ba51-99b4-45b8-ab79-58399dd2a684-00-2r33bx6x3ysoc.janeway.replit.dev/msg/getAll')
+  fetch('https://messageboard-9.onrender.com/msg/getAll')
   .then(function(response) {
     return response.json();
   })
@@ -83,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   button.addEventListener('click', function() {
     const message = textarea.value;
-    fetch('https://7bb3ba51-99b4-45b8-ab79-58399dd2a684-00-2r33bx6x3ysoc.janeway.replit.dev/msg/post/' + message)
+    //fetch('https://7bb3ba51-99b4-45b8-ab79-58399dd2a684-00-2r33bx6x3ysoc.janeway.replit.dev/msg/post/' + message)
+    fetch('https://messageboard-9.onrender.com/msg/post/' + message)
     .then(function(response) {
       return response.json();
     })
